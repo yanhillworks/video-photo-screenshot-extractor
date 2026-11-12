@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Video Screenshot & Frame Extractor",
+  "short_name": "Video Screenshot",
+  "version": "10.4",
+  "description": "One-click tool to take high-quality screenshots from YouTube, Instagram, Facebook, and any video on the web.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
